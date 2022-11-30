@@ -7,20 +7,18 @@ class Home_page extends StatelessWidget {
   Widget build(BuildContext context) {
     final String name = "Coder";
     final int num = 123;
-    return Material(
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text("My App"),
-          centerTitle: true,
-        ),
-        body: Center(
-          child: Text(
-            "My num is $num and name is $name",
-            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-          ),
-        ),
-        drawer: Drawer(),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("My App"),
+        centerTitle: true,
       ),
+      body: Center(
+        child: Text(
+          "My num is $num and name is $name",
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+        ),
+      ),
+      drawer: Drawer(),
     );
   }
 }
