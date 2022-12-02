@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Login_page extends StatelessWidget {
+import 'util/routes.dart';
+
+class Login_page extends StatefulWidget {
   const Login_page({super.key});
 
+  @override
+  State<Login_page> createState() => _Login_pageState();
+}
+
+class _Login_pageState extends State<Login_page> {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -35,9 +42,10 @@ class Login_page extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    print("Hi Harry");
+                    Navigator.pushNamed(context, MyRoutes.HomeRoute);
                   },
                   child: Text("Login"),
+                  style: TextButton.styleFrom(minimumSize: Size(100, 50)),
                 ),
               ],
             ),
